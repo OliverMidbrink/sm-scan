@@ -21,6 +21,10 @@ function App() {
     setValues({ ...values, [prop]: event.target.value });
   };
 
+  function filtered(input) {
+    return String(input).toLowerCase();
+  }
+
 
   return (
     <div className="App">
@@ -38,9 +42,9 @@ function App() {
           />
           <FormHelperText id="outlined-weight-helper-text">KTH mail</FormHelperText>
         </FormControl>
-        <QRCode value={values.mailPrefix} />
+        <QRCode value={filtered(values.mailPrefix)} />
         <p>
-          Fyll i din KTH mejl. Inga personuppgifter sparas.
+          Fyll i din KTH mejl här. Inga personuppgifter sparas.
         </p>
       </header>
     </div>
