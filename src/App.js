@@ -32,7 +32,7 @@ function App() {
         <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
           <OutlinedInput
             id="outlined-adornment-weight"
-            value={values.mailPrefix}
+            value={filtered(values.mailPrefix)}
             onChange={handleChange('mailPrefix')}
             endAdornment={<InputAdornment position="end">@kth.se</InputAdornment>}
             aria-describedby="outlined-weight-helper-text"
